@@ -6,7 +6,7 @@ CFLAGS=-Wall -Wextra -g3
 all: makeAll
 
 makeAll: makeHelper makeRandom makeStats  makeAlgebra makeMachine makeMain
-	$(CC) $(CFLAGS) helper.o random.o stats.o  algebra.o machine_learning.o main.o -o beamforming -ldl -lm -lblas -llapack -lpthread 
+	$(CC) $(CFLAGS) helper.o random.o stats.o  algebra.o machine_learning.o main.o -o machine_learning -ldl -lm -lblas -llapack -lpthread 
 
 makeMain: main.c
 	$(CC) $(CFLAGS) -c main.c -o main.o 
